@@ -18,6 +18,7 @@
                     <th>ID</th>
                     <th>Nome</th>
                     <th>Descrição</th>
+                    <th>Ativo</th>
                     <th>Ações</th>
                 </tr>
                 @foreach($categories as $category)
@@ -25,6 +26,7 @@
                         <td>{{ $category->id }}</td>
                         <td>{{ $category->name }}</td>
                         <td>{{ $category->description }}</td>
+                        <td>{{ ($category->active) ? 'Sim' : 'Não' }}</td>
                         <td>
                             <form action="{{ route('categories.destroy', ['id' => $category->id]) }}" method="POST">
                                 {{ method_field('DELETE') }}

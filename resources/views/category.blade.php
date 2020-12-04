@@ -25,9 +25,25 @@
                 <div class="form-row">
                     <div class="form-group col-md-12">
                         <label for="nome">Nome</label>
-                        <input type="text" name="nome" id="nome" class="form-control" placeholder="Nome da categoria" value="{{ $category->nome }}">
+                        <input type="text" name="name" id="name" class="form-control" placeholder="Nome da categoria" value="{{ $category->name }}">
                     </div>
-                </div>
+                    <div class="form-group col-md-12">
+                        <label for="description">Descrição</label>
+                        <textarea name="description" id="description" rows="5" class="form-control" placeholder="Digite a descrição da questão">{{ $category->description }}</textarea>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-12">
+                            <div class="custom-control custom-switch">
+                                @if($category->active)
+                                    <input type="checkbox" name="active" id="active" class="custom-control-input" value="S" checked>
+                                @else
+                                    <input type="checkbox" name="active" id="active" class="custom-control-input" value="S">
+                                @endif
+                                <label for="active" class="custom-control-label">Ativo</label>
+                            </div>   
+                        </div>
+                    </div>
+                </div>    
                 <button type="submit" class="btn btn-primary">Salvar</button>
 
             </form>

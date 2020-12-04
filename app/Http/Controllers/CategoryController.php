@@ -51,7 +51,7 @@ class CategoryController extends Controller {
         $category = new Category();
         $category->name = $request->input('name');
         $category->description = $request->input('description');
-        $category->correct = ($request->input('correct') == 'S');
+        $category->active = ($request->input('active') == 'S');
         $category->save();
 
         return redirect()->route('categories.index');
@@ -88,7 +88,7 @@ class CategoryController extends Controller {
         $category = Category::find($id);
         $category->name = $request->input('name');
         $category->description = $request->input('description');
-        $category->correct = ($request->input('correct') == 'S');
+        $category->active = ($request->input('active') == 'S');
         $category->save();
 
         return redirect()->route('categories.index');
