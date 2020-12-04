@@ -13,7 +13,7 @@
           <a class="nav-link" href="{{ route('categories.index') }}">Gerenciar Categorias</a>
       </li>
       <li class="nav-item active">
-          <a class="nav-link" href="#">Gerenciar Postagens</a>
+          <a class="nav-link" href="{{ route('posts.index') }}">Gerenciar Postagens</a>
       </li>
       <li class="nav-item">
           <a class="nav-link" href="{{ route('logout') }}">Deslogar</a>

@@ -16,6 +16,11 @@ class CategoriesSeeder extends Seeder
                 'name' => 'Futebol',
                 'description' => 'Tudo sobre o esporte mais amado no mundo.',
                 'active' => 1
+            ],
+            [
+                'name' => 'Fórmula 1',
+                'description' => 'A mais rápida e mais amada competição de automobilismo do mundo.',
+                'active' => 1
             ]
         ]);
     }

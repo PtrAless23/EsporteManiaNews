@@ -24,7 +24,7 @@
                 {{ csrf_field() }}
                 <div class="form-row">
                     <div class="form-group col-md-12">
-                        <label for="nome">Nome</label>
+                        <label for="name">Nome</label>
                         <input type="text" name="name" id="name" class="form-control" placeholder="Nome da categoria" value="{{ $category->name }}">
                     </div>
                     <div class="form-group col-md-12">

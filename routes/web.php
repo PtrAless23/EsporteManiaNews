@@ -13,7 +13,6 @@
 
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('artigo', 'HomeController@artigo')->name('artigo');
-Route::post('categoria', 'HomeController@categoria')->name('categoria');
 
 Route::get('logout', 'HomeController@logout')->name('logout');
 
@@ -25,6 +24,14 @@ Route::middleware(['auth'])->group(function(){
         Route::get('{id}', 'CategoryController@edit')->name('categories.edit');
         Route::put('{id}', 'CategoryController@update')->name('categories.update');
         Route::delete('{id}', 'CategoryController@destroy')->name('categories.destroy');
+    });
+    Route::prefix('postagens')->group(function() {
+        Route::get('', 'PostController@index')->name('posts.index');
+        Route::get('novo', 'PostController@create')->name('posts.create');
+        Route::post('', 'PostController@store')->name('posts.store');
+        Route::get('{id}', 'PostController@edit')->name('posts.edit');
+        Route::put('{id}', 'PostController@update')->name('posts.update');
+        Route::delete('{id}', 'PostController@destroy')->name('posts.destroy');
     });
         
 });
